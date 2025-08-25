@@ -26,16 +26,16 @@ class robo:
             movimento = int(input("Digite o movimento: "))
             if movimento == 1:
                 self.posicao +=1
-                print(f"\nA posiçao do robo e {self.posicao}\n")
+                print(f"\n\033[31mA posiçao do robo e {self.posicao}\033[m\n")
             elif movimento == 2:
                 self.posicao -=1
-                print(f"\nA posiçao do robo e {self.posicao}\n")
+                print(f"\n\033[31mA posiçao do robo e {self.posicao}\033[m\n")
             elif movimento == 3:
-                print(f"\nA posiçao do robo e {self.posicao}\n")
+                print(f"\n\033[31mA posiçao do robo e {self.posicao}\033[m\n")
             elif movimento ==4:
-                print(f"\nA posiçao do robo e {self.posicao}\n")
+                print(f"\n\033[31mA posiçao do robo e {self.posicao}\033[m\n")
                 break
             else:
-                print(f"Vc nao digitou a posiçao errada.")
+                print(f"\n\033[31mVc nao digitou a posiçao errada.\033[m\n")
 robot = robo()
 robot.numeros()
