@@ -30,7 +30,14 @@ class Validacao:
         self.b:str = b
         self.c:str = c
     def verificador(self):
-        if self.a.isdigit():
-            pass
+        while True:
+            if self.a.isdigit and self.b.isdigit and self.c.isdigit():
+                break
+            else:
+                print("Digite de novo")
     def soma(self):
-        num1 = self.a < (self.b + self.c)
+        if self.a < (self.b + self.c):
+            pass
+
+var = Validacao("1", "2" ,"3")
+var.verificador()
