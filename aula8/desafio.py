@@ -22,8 +22,9 @@ class Validacao:
         b = self.b
         c = self.c
 
-        if a < b + c and b < a + c and c < a + b:
-            print("Deu certo: É um triângulo")
+        if abs(b - c) < a < b + c and abs(a - c) < b < a + c and abs(a - b) < c < a + b:
+             print("É um triângulo")
+
         else:
             print("Não é triângulo")
 
