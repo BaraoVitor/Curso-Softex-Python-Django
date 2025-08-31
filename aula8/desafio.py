@@ -1,43 +1,32 @@
-#Desafio de Programação: Validação de Triângulo
-#Seu objetivo: Escrever um algoritmo em Python que determine se três valores, fornecidos pelo usuário, podem formar um triângulo.
-
-#As Regras do Jogo
-#1- Teste se a entrada de dados é um número.
-#2- Se for um número teste se é positivo
-#3- Para que três lados (lA,lB,lC) formem um triângulo, eles devem obedecer a duas condições importantes:
-
-#A soma: A soma de quaisquer dois lados deve ser maior que o terceiro lado.
-
-#lA<lB+lC
-
-#lB<lA+lC
-
-#lC<lA+lB
-
-#A diferença: O valor absoluto da diferença entre dois lados deve ser menor que o terceiro lado.
-
-#lA>∣lB−lC∣
-
-#lB>∣lA−lC∣
-
-#lC>∣lA−lB∣
-
-#Dica: use o método abs() para ter o valor absoluto de um número.
-
 class Validacao:
-    def __init__(self, a:str, b:str, c:str):
-        self.a:str = a
-        self.b:str = b
-        self.c:str = c
+    def __init__(self, a: str, b: str, c: str):
+        self.a = a
+        self.b = b
+        self.c = c
+
     def verificador(self):
         while True:
-            if self.a.isdigit and self.b.isdigit and self.c.isdigit():
+            if self.a.isdigit() and self.b.isdigit() and self.c.isdigit():
+                self.a = int(self.a)
+                self.b = int(self.b)
+                self.c = int(self.c)
                 break
             else:
-                print("Digite de novo")
-    def soma(self):
-        if self.a < (self.b + self.c):
-            pass
+                print("Digite os valores novamente (apenas números inteiros positivos):")
+                self.a = input("A: ")
+                self.b = input("B: ")
+                self.c = input("C: ")
 
-var = Validacao("1", "2" ,"3")
+    def soma(self):
+        a = self.a
+        b = self.b
+        c = self.c
+
+        if a < b + c and b < a + c and c < a + b:
+            print("Deu certo: É um triângulo")
+        else:
+            print("Não é triângulo")
+
+var = Validacao("a", "2", "3")
 var.verificador()
+var.soma()
